@@ -60,10 +60,10 @@ src="https://www.facebook.com/tr?id=1505097987931966&ev=PageView&noscript=1"
                         <span>14 DE JUNHO</span>
                     </div>
                     <h2><span class="h2-light">EXCLUSIVE</span><span class="h2-bold">PRÉ-ORDER</span></h2>
-                    <span class="form-subtitle">A.I. ORIGINALFILME</span>
+                    <span class="form-subtitle">Salan Sunset: A Origem</span>
                     <p>Preencha os dados e garanta sua vaga prioritária com desconto especial.</p>
                     
-                    <form method="post" action="https://webhook.sellflux.app/v2/webhook/form/ea66854573a60ed7938e5ac57a32cc69?not_query=true&redirect_url=https%3A%2F%2Fsalansunset.vercel.app%2Fobrigado.html" class="capture-form">
+                    <form class="capture-form" id="captureForm">
                         <div class="input-group">
                             <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -108,6 +108,24 @@ src="https://www.facebook.com/tr?id=1505097987931966&ev=PageView&noscript=1"
     </main>
 
     <script src="js/script2.js"></script>
+    <script>
+    document.getElementById('captureForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var form = this;
+        var data = {
+            name: form.querySelector('input[name="name"]').value,
+            email: form.querySelector('input[name="email"]').value,
+            phone: form.querySelector('input[name="phone"]').value
+        };
+        fetch('https://webhook.folemmidia.com/webhook/54a2c9e0-7835-4213-9e5a-18bdc0893fda', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).finally(function() {
+            window.location.href = 'obrigado.html';
+        });
+    });
+    </script>
 
 
 </body></html>
