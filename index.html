@@ -60,44 +60,16 @@ src="https://www.facebook.com/tr?id=1505097987931966&ev=PageView&noscript=1"
                     </div>
                     <h2><span class="h2-light">EXCLUSIVE</span><span class="h2-bold">PRÉ-ORDER</span></h2>
                     <span class="form-subtitle">Salan Sunset: A Origem</span>
-                    <p>Preencha os dados e garanta sua vaga prioritária com desconto especial.</p>
-                    
-                    <form class="capture-form" id="captureForm">
-                        <div class="input-group">
-                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="12" cy="7" r="4"></circle>
-                            </svg>
-                            <input type="text" id="name-2" name="name" placeholder="Seu primeiro nome" required="">
-                            <div class="input-line"></div>
-                        </div>
-                        <div class="input-group">
-                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <input type="email" id="email-2" name="email" placeholder="Seu melhor e-mail" required="">
-                            <div class="input-line"></div>
-                        </div>
-                        <div class="input-group phone-group">
-                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                            </svg>
-                            <select class="ddi-select" id="ddi-2"></select>
-                            <input data-phone-with-ddi="" type="tel" id="tel-2" name="phone" maxlength="15" placeholder="(00) 00000-0000" required="">
-                            <div class="input-line"></div>
-                        </div>
-                        <button type="submit" class="cta-button submit-btn">
-                            <span class="button-scan"></span>
-                            <span class="button-text">Garantir Acesso VIP</span>
-                            <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                            <span class="button-glow"></span>
-                        </button>
-                    </form>
-                    <script src="js/script_form.js"></script>
+                    <p>Garanta sua vaga prioritária com desconto especial.</p>
+
+                    <a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="cta-button submit-btn">
+                        <span class="button-scan"></span>
+                        <span class="button-text">Garantir Acesso VIP</span>
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                        <span class="button-glow"></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -107,24 +79,6 @@ src="https://www.facebook.com/tr?id=1505097987931966&ev=PageView&noscript=1"
     </main>
 
     <script src="js/script2.js"></script>
-    <script>
-    document.getElementById('captureForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var form = this;
-        var data = {
-            name: form.querySelector('input[name="name"]').value,
-            email: form.querySelector('input[name="email"]').value,
-            phone: form.querySelector('input[name="phone"]').value
-        };
-        fetch('https://webhook.folemmidia.com/webhook/54a2c9e0-7835-4213-9e5a-18bdc0893fda', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        }).finally(function() {
-            window.location.href = 'https://shotgun.live/events/salan-sunset-a-origem';
-        });
-    });
-    </script>
 
 
 </body></html>
