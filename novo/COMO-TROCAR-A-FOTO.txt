@@ -1,0 +1,16 @@
+COMO TROCAR A FOTO DO HERO (1ª dobra)
+-------------------------------------
+A imagem do topo é o arquivo: assets/hero.jpg
+
+Para usar uma foto de banco gratuito da Amazônia, basta substituir
+esse arquivo por outra imagem com o MESMO nome (assets/hero.jpg).
+Use uma foto na vertical/grande (ex.: 1700px de largura ou mais).
+
+Sugestões de busca em bancos gratuitos (uso livre):
+- Pexels:   https://www.pexels.com/search/amazon%20rainforest/
+- Unsplash: https://unsplash.com/s/photos/amazon-rainforest
+- Pixabay:  https://pixabay.com/images/search/amazon%20rainforest/
+
+Dica: escolha uma foto mais escura/ao entardecer para combinar com o
+degradê escuro da seção "O Artista". O retrato sobreposto é assets/portrait.jpg
+e pode ser trocado da mesma forma.
