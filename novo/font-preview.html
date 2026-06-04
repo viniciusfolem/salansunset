@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview de Fontes</title>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Righteous&family=Playfair+Display:ital,wght@1,900&family=Bodoni+Moda:ital,opsz,wght@1,18,900&family=Fredoka+One&family=Baloo+2:wght@800&family=Abril+Fatface&family=DM+Serif+Display:ital@1&family=Rozha+One&family=Playfair+Display:wght@900&family=Spectral:wght@800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #081510; color: #fff; }
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 60px 40px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    gap: 20px;
+  }
+  .label {
+    font-family: sans-serif;
+    font-size: 13px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+  }
+  .text {
+    font-size: clamp(60px, 11vw, 160px);
+    line-height: 1.0;
+    background-image: linear-gradient(rgba(255,255,255,.05),rgba(255,255,255,.05)), url('assets/ftext.jpg');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-align: center;
+  }
+
+  /* 3 — referência que gostou */
+  .opt3 .text { font-family: 'Yeseva One', serif; }
+  /* 4 — referência que gostou */
+  .opt4 .text { font-family: 'Righteous', cursive; }
+  /* novas opções */
+  .opt5 .text { font-family: 'Playfair Display', serif; font-weight: 900; font-style: italic; }
+  .opt6 .text { font-family: 'Bodoni Moda', serif; font-weight: 900; font-style: italic; }
+  .opt7 .text { font-family: 'Fredoka One', cursive; }
+  .opt8 .text { font-family: 'Baloo 2', cursive; font-weight: 800; }
+  .opt9 .text { font-family: 'Abril Fatface', serif; }
+  .opt10 .text { font-family: 'DM Serif Display', serif; font-style: italic; }
+  /* novas — similares a Yeseva One, mais grossas */
+  .opt11 .text { font-family: 'Rozha One', serif; }
+  .opt12 .text { font-family: 'Playfair Display', serif; font-weight: 900; }
+  .opt13 .text { font-family: 'Spectral', serif; font-weight: 800; }
+</style>
+</head>
+<body>
+
+<div class="option opt3">
+  <div class="label">3 — Yeseva One (referência)</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt4">
+  <div class="label">4 — Righteous (referência)</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt5">
+  <div class="label">5 — Playfair Display 900 Itálico</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt6">
+  <div class="label">6 — Bodoni Moda 900 Itálico</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt7">
+  <div class="label">7 — Fredoka One</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt8">
+  <div class="label">8 — Baloo 2 peso 800</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt9">
+  <div class="label">9 — Abril Fatface</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt10">
+  <div class="label">10 — DM Serif Display Itálico</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+
+<div class="option opt11">
+  <div class="label">11 — Rozha One (Yeseva + mais grossa)</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt12">
+  <div class="label">12 — Playfair Display 900 (Yeseva + mais grossa, reta)</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+<div class="option opt13">
+  <div class="label">13 — Spectral 800 (Yeseva + mais grossa, elegante)</div>
+  <div class="text">Amazônia +<br>Futuro</div>
+</div>
+
+</body>
+</html>
