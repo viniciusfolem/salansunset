@@ -71,8 +71,8 @@ nav a:hover{color:#fff}nav a:hover::after{width:100%}
 .hero-bg video.hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:50% 26%;opacity:0;transition:opacity .8s ease}
 .hero-bg video.hero-video.visible{opacity:1}
 .hero-bg::after{content:"";position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(6,18,10,.8),rgba(8,24,14,.55) 26%,rgba(6,18,10,.78) 62%,rgba(10,28,17,.96) 86%,var(--green-deep) 100%),
-  linear-gradient(90deg,rgba(6,18,10,.75),transparent 38%,transparent 70%,rgba(6,18,10,.6))}
+  linear-gradient(180deg,rgba(6,18,10,.7),rgba(8,24,14,.35) 26%,rgba(6,18,10,.58) 62%,rgba(10,28,17,.76) 86%,var(--green-deep) 100%),
+  linear-gradient(90deg,rgba(6,18,10,.65),transparent 38%,transparent 70%,rgba(6,18,10,.5))}
 .hero-inner{position:relative;z-index:3;padding:0 9vw;max-width:1320px;width:100%;margin:0 auto}
 .hero-tag{margin-bottom:24px;opacity:0;animation:rise .9s .2s forwards}
 .hero h1{margin:0;font-family:var(--font-display);font-weight:400;line-height:1.04;color:#fff;letter-spacing:0;
@@ -140,7 +140,7 @@ nav a:hover{color:#fff}nav a:hover::after{width:100%}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
 /* ---------- 01 O ARTISTA (dark, overlaps hero) ---------- */
-.sobre{padding-top:140px;padding-bottom:130px;margin-top:0;position:relative;z-index:10;border-radius:28px 28px 0 0;box-shadow:0 -18px 36px rgba(12,30,18,1);overflow:visible}
+.sobre{padding-top:140px;padding-bottom:130px;margin-top:0;position:relative;z-index:10;border-radius:28px 28px 0 0;box-shadow:0 -18px 36px #081510;overflow:visible}
 .artist-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:start}
 .artist-portrait-desktop{display:block}
 .artist-portrait-mobile{display:none}
@@ -155,7 +155,7 @@ nav a:hover{color:#fff}nav a:hover::after{width:100%}
 .artist-text .accent{color:#fff;font-weight:500}
 .artist-text .more{display:inline-flex;align-items:center;gap:10px;margin-top:18px;color:var(--lime);font-size:13px;letter-spacing:.16em;text-transform:uppercase}
 .artist-text .more svg{width:30px;height:10px;stroke:var(--lime);fill:none;stroke-width:1.4}
-.artist-portrait{position:relative;margin-top:-30vh;margin-bottom:80px}
+.artist-portrait{position:relative;margin-top:0;margin-bottom:40px}
 .artist-portrait .frame{border-radius:6px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.22)}
 .artist-portrait .frame img{width:100%;height:560px;object-fit:cover;object-position:50% 30%}
 .artist-portrait .cap{position:absolute;left:22px;bottom:22px;color:#fff;z-index:2}
@@ -267,7 +267,7 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
   .verde-top{grid-template-columns:1fr;gap:32px}
   .artist-portrait-desktop{display:none}
   .artist-portrait-mobile{display:block;margin-top:24px;margin-bottom:24px;width:100%}
-  .artist-portrait .frame img{height:380px}
+  .artist-portrait .frame img{height:480px}
   .artist-portrait{margin-top:0}
   .sobre{margin-top:0}
   .diff-cols,.verde-cards{grid-template-columns:1fr}
@@ -321,10 +321,10 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
       <li><a href="#experiencias">Experiências</a></li>
       <li><a href="#verde">Salan Verde</a></li>
       <li><a href="#patrocinadores">Patrocinadores</a></li>
-      <li><a href="#ingresso" class="btn-ticket mobile-ticket">Comprar Ingresso</a></li>
+      <li><a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="btn-ticket mobile-ticket">Comprar Ingresso</a></li>
     </ul>
   </nav>
-  <a href="#ingresso" class="btn-ticket">
+  <a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="btn-ticket">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/></svg>
     Comprar Ingresso
   </a>
@@ -364,7 +364,6 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
     <a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="hero-cta-btn">
       <span class="hero-btn-scan"></span>
       <span class="hero-btn-text">Garantir Acesso VIP</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hero-btn-icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       <span class="hero-btn-glow"></span>
     </a>
   </div>
@@ -520,7 +519,7 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
     <div class="reveal d2" style="margin-top:40px;text-align:center">
       <img src="assets/patrocinadores.png" alt="Patrocinadores" style="width:100%;max-width:1200px;height:auto;display:inline-block;border-radius:6px">
     </div>
-    <div style="margin-top:52px" class="reveal d3"><a href="#ingresso" class="btn-primary" style="background:var(--lime);color:var(--green-deep);font-family:var(--font-body);font-weight:500;padding:16px 36px;border-radius:46px;display:inline-flex;align-items:center;gap:11px">Quero patrocinar</a></div>
+    <div style="margin-top:52px" class="reveal d3"><a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="btn-primary" style="background:var(--lime);color:var(--green-deep);font-family:var(--font-body);font-weight:500;padding:16px 36px;border-radius:46px;display:inline-flex;align-items:center;gap:11px">Quero patrocinar</a></div>
   </div>
 </section>
 
@@ -563,7 +562,6 @@ toggle.addEventListener('click',()=>{toggle.classList.toggle('active');navList.c
 navList.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('active');navList.classList.remove('open')}));
 const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.getElementById('buyBtn').addEventListener('click',(e)=>{e.preventDefault();alert('Conecte aqui o link da plataforma de ingressos (Sympla, Shotgun, etc.)');});
 </script>
 </body>
 </html>
