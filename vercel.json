@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/assets/:path*", "destination": "/novo/assets/:path*" },
+    { "source": "/logo.png", "destination": "/novo/logo.png" },
+    { "source": "/", "destination": "/novo/index.html" }
+  ]
+}
