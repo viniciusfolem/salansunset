@@ -538,6 +538,8 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
 
 <script>
 const heroVideo=document.querySelector('.hero-video'),heroPoster=document.querySelector('.hero-poster');
+heroVideo.loop=true;
+heroVideo.addEventListener('ended',()=>heroVideo.play());
 const heroInd=document.querySelector('.hero-ind');
 const lightSections=document.querySelectorAll('.section.light,.section.warm');
 const lightObserver=new IntersectionObserver((entries)=>{
