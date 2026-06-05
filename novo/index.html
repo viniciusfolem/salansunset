@@ -30,7 +30,8 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--green-deep);color:var(--on-dark);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:300}
+html,body{overflow-x:hidden;max-width:100%}
+body{font-family:var(--font-body);background:var(--green-deep);color:var(--on-dark);-webkit-font-smoothing:antialiased;font-weight:300}
 ::selection{background:var(--lime);color:var(--green-deep)}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -60,7 +61,7 @@ nav a:hover{color:#fff}nav a:hover::after{width:100%}
 .btn-ticket::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);animation:btn-shine 3s linear infinite}
 @keyframes btn-shine{0%{left:-100%}100%{left:100%}}
 .btn-ticket svg{width:15px;height:15px}
-.menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;z-index:120}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;z-index:10002}
 .menu-toggle span{display:block;width:26px;height:2px;background:#fff;border-radius:2px;transition:.3s}
 
 /* ---------- HERO (MNTN-style, dark, fades into next section) ---------- */
@@ -218,7 +219,7 @@ nav a:hover{color:#fff}nav a:hover::after{width:100%}
 /* ---------- SALAN VERDE (light) ---------- */
 .verde-top{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;margin-top:50px}
 .verde-mega .pre{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:16px;font-weight:500}
-.verde-mega .one{font-family:var(--font-display);font-weight:400;font-size:clamp(40px,7vw,96px);line-height:.98;color:#4f8a23;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.verde-mega .one{font-family:var(--font-display);font-weight:400;font-size:clamp(22px,4vw,52px);line-height:1.1;color:#4f8a23;display:flex;align-items:center;gap:12px;flex-wrap:nowrap;white-space:nowrap}
 .verde-mega .one .tree{font-size:.78em}
 .verde-mega .note{margin-top:24px;font-size:16px;line-height:1.8;color:var(--ink-soft);max-width:46ch;font-weight:300}
 .verde-shirt{background:#fff;border-radius:6px;box-shadow:0 24px 60px rgba(22,58,35,.16);padding:44px;text-align:center}
@@ -236,13 +237,13 @@ nav a:hover{color:#fff}nav a:hover::after{width:100%}
 .gcard p{font-size:14.5px;line-height:1.75;color:#496b3c;font-weight:300}
 
 /* ---------- PATROCINADORES (warm light) ---------- */
-.spons{text-align:center}
+.spons{text-align:center;padding-bottom:120px}
 .spons .invest{max-width:760px;margin:0 auto 60px}
 .spons .invest p{font-size:clamp(16px,1.5vw,18px);line-height:1.85;color:var(--ink-soft);font-weight:300;margin-top:18px}
 .spons .invest .accent{color:var(--ink);font-weight:500}
 .spons .final{font-family:var(--font-display);font-weight:400;font-size:clamp(40px,8vw,108px);line-height:.98;color:var(--ink);margin:24px 0 14px;letter-spacing:-.01em}
 .spons .final .w{color:#4f8a23;font-style:italic}
-.spons .final-sub{font-family:var(--font-script);font-size:clamp(28px,4vw,46px);color:#6f9b3e;margin-bottom:46px}
+.spons .final-sub{font-family:"Lora",Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(18px,2.5vw,28px);color:#6f9b3e;margin-bottom:46px;letter-spacing:.02em}
 .spons-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;justify-content:center}
 .spons-tag{display:inline-block;padding:8px 20px;border:1px solid rgba(22,58,35,.3);border-radius:30px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;font-family:var(--font-body)}
 .logos-row{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin-top:10px}
@@ -283,9 +284,12 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
   .hero-logo-img{max-width:80vw}
 }
 @media(max-width:760px){
-  nav ul{position:fixed;inset:0;background:rgba(10,18,13,.97);backdrop-filter:blur(16px);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .4s;z-index:110}
-  nav ul.open{transform:translateX(0)}
-  nav a{font-size:20px;letter-spacing:.04em}
+  nav ul{position:fixed;top:64px;left:50%;right:0;width:50%;background:rgba(8,21,16,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;gap:0;padding:8px 0 16px;transform:translateY(-110%);opacity:0;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .3s ease;z-index:10001;pointer-events:none;box-shadow:0 12px 40px rgba(0,0,0,.5);border-radius:0 0 0 12px}
+  nav ul.open{transform:translateY(0);opacity:1;pointer-events:all}
+  nav ul li{border:none}
+  nav a{font-size:14px;letter-spacing:.04em;padding:14px 24px;display:block;color:#d7e4cb}
+  nav a:hover{background:rgba(255,255,255,.04);color:#fff}
+  nav ul .btn-ticket.mobile-ticket{display:flex!important;width:100%;border-radius:0;justify-content:center;margin:8px 0 0;padding:14px 24px;box-sizing:border-box}
   .btn-ticket{display:none}
   .mobile-ticket{display:inline-flex!important}
   .menu-toggle{display:flex}
@@ -303,7 +307,7 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
   .foot-wrap{flex-direction:column;gap:16px;text-align:center}
   .spons-tags{gap:8px}
   .diff .mega{font-size:clamp(40px,15vw,80px)}
-  .sec-head{flex-direction:column;gap:10px;margin-bottom:36px}
+  .sec-head{flex-direction:row;gap:16px;margin-bottom:36px;align-items:center}
   .pillars{grid-template-columns:1fr}
 }
 .mobile-ticket{display:none}
@@ -358,7 +362,7 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
       </span>
       <span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Ponta Negra
+        Manaus/AM
       </span>
     </div>
     <a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="hero-cta-btn">
@@ -516,10 +520,10 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
     </div>
     <div class="final reveal d2">Faça parte <span class="w">desse projeto</span></div>
     <div class="final-sub reveal d2">vamos construir juntos a origem</div>
-    <div class="reveal d2" style="margin-top:40px;text-align:center">
-      <img src="assets/patrocinadores.png" alt="Patrocinadores" style="width:100%;max-width:1200px;height:auto;display:inline-block;border-radius:6px">
+    <div style="margin-top:40px;text-align:center" class="reveal d2"><a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="btn-primary" style="background:var(--lime);color:var(--green-deep);font-family:var(--font-body);font-weight:500;padding:16px 36px;border-radius:46px;display:inline-flex;align-items:center;gap:11px">Quero patrocinar</a></div>
+    <div class="reveal d3" style="margin-top:52px;text-align:center">
+      <img src="assets/logosdepatrocinadores.webp" alt="Patrocinadores" style="width:100%;max-width:1200px;height:auto;display:inline-block;border-radius:6px">
     </div>
-    <div style="margin-top:52px" class="reveal d3"><a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="btn-primary" style="background:var(--lime);color:var(--green-deep);font-family:var(--font-body);font-weight:500;padding:16px 36px;border-radius:46px;display:inline-flex;align-items:center;gap:11px">Quero patrocinar</a></div>
   </div>
 </section>
 
@@ -527,7 +531,7 @@ footer{background:rgba(15,44,26,.96);backdrop-filter:blur(12px);-webkit-backdrop
 <footer id="ingresso">
   <div class="foot-wrap">
     <div class="foot-logo"><img src="logo.png" alt="Salan Sunset"></div>
-    <div class="foot-meta"><strong>14/12</strong> · Tropical Hotel · Ponta Negra</div>
+    <div class="foot-meta"><strong>14/12</strong> · Tropical Hotel · Manaus/AM</div>
     <a href="https://shotgun.live/events/salan-sunset-a-origem" target="_blank" class="btn-ticket" id="buyBtn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px"><path d="M3 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/></svg>
       Comprar Ingresso
