@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"section.dark\\\\|\\\\.dark{\\\\|section.deeper\\\\|--green\\\\|background:linear-gradient\\(135deg,#030b06\" \"novo/index.html\")",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(kill %1)",
+      "Bash(node -e \"console.log\\(require.resolve\\('jsdom'\\)\\)\")",
+      "Bash(node -e ' *)",
+      "Read(//c/Program Files/Google/Chrome/Application//**)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application//**)",
+      "Bash(python -m http.server 8123)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --screenshot=/tmp/before.png --window-size=1280,1600 \"http://localhost:8123/index.html\")",
+      "Read(//c/tmp/**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --virtual-time-budget=3000 --dump-dom \"file:///tmp/test.html\")",
+      "Bash(grep -o \"result.\\\\{0,300\\\\}\" out.html)",
+      "Bash(grep -o \"chip[^<]*\" /tmp/out.html | head -10; echo \"---\"; grep -c \"<div\" /tmp/out.html)",
+      "Read(//tmp/**)",
+      "Bash(python -m http.server 8124)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --virtual-time-budget=4000 --dump-dom \"http://localhost:8124/test.html\")",
+      "Bash(grep -o \"result.\\\\{0,400\\\\}\" /tmp/out2.html)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --run-all-compositor-stages-before-draw --virtual-time-budget=4000 --screenshot=/tmp/test.png --window-size=1280,2000 \"http://localhost:8124/test.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --run-all-compositor-stages-before-draw --virtual-time-budget=4000 --dump-dom \"http://localhost:8124/test.html\")",
+      "Bash(grep -o \"result.\\\\{0,400\\\\}\" /tmp/out3.html)"
+    ]
+  }
+}
